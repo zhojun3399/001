@@ -1,0 +1,193 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* css 初始化 */
+/* 1.清除浏览器默认样式 */
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+/* 2.针对性处理 */
+ol,ul{ list-style:none;}
+textarea{ resize:none;}
+img{ border:none; display:block;}
+/* 3.设置全局样式 */
+body{ color:#606060; font-size:12px; font-family:"宋体";}
+a{color:#606060; text-decoration:none;}
+a:hover{ text-decoration:underline;}
+/* 4.定义常用类 */
+.w{ width:980px; margin:0 auto; }
+.clearfix:after,.clearfix:before{ content:""; display:table;}
+.clearfix:after{ clear:both;}
+.clearfix{*zoom:1;}
+
+/*__________________________________初始化_______________________________________*/
+
+/* 音乐 */
+.yinyue{ width:88px; height:30px; right:100px; top:26px; z-index:2; position:fixed; transform:skewY(5deg) ;}
+
+
+.header{ width:100%; height:80px; background:rgba(0,0,0,.8); background-attachment:fixed; position:fixed; left:0; top:0; z-index:1;}
+.inHeader{ width:1000px; height:80px; margin:0 auto;}
+.inHeader .face{ width:100px; height:80px; float:left;}
+.inHeader .face a{ position:absolute; text-indent:-999em;}
+/* logo */
+.inHeader .face .logo{ width:74px; height:74px; background:#F99; border-radius:50%; transform-style:preserve-3d; animation:zhuan 1.3s linear infinite; background:url(logo.jpg) no-repeat;}
+@keyframes zhuan{
+	
+	100%{ transform:rotateY(360deg) }	
+;}
+/* 导航 */
+.inHeader ul{ width: 842px; height:80px; float:right; padding-left:255px; box-sizing:border-box;}
+.inHeader ul li{ width:90px; height:40px; border:1px solid #F00; line-height:40px; text-align:center; cursor:pointer; border:2px solid #FFF; border-radius:6px; float:left; margin:20px; 
+transition:all .5s linear;
+}
+.inHeader ul li.current{ width:90px; height:40px; background: #06C;}
+.inHeader ul li a{width:90px; height:40px; display:block; text-decoration:none; font-size:14px; font-weight:bold; color: #FFF;}
+/* ______________________________________ */
+/* banner */
+
+
+body,html{ height:100%;}
+.banner{ width:100%; height:100%; overflow:hidden; position:relative; background:#AFA9AA;}
+.banner ul{ width:500%; height:100%; position:absolute; left:0; top:0;}
+.banner ul li{ width:20%; height:100%; background: url(banner02.png) no-repeat center 0; float:left; background-size: cover;}
+
+.banner ol{ width:100%; height:4px; position:absolute; left:0; bottom:0;}
+.banner ol li{ width:20%; height:4px; background:#ccc; float:left;}
+.banner ol li.current{ background:#06c;}
+
+
+.banner .banner-w{ width:1000px; height:100%; margin:0 auto; position:relative;}
+.banner .banner-w .left,.banner .right{ width:54px; height:54px; background:url(ad.png) no-repeat 0 0; position:absolute; left:0; top:50%; margin-top:-26px;}
+.banner .banner-w .left:hover{ background-position: left -62px;}
+.banner .banner-w .right{ left:auto; right:0; top:50%; margin-top:-26px; background-position:right 0;}
+.banner .banner-w .right:hover{ background-position: right -62px;}
+
+.banner .arrow{ width:121px; height:44px; position:absolute; left:50%; margin-left:-60px; background:url(arrow1.png) no-repeat; bottom:-20px; animation:arrow 1.6s ease 0s infinite;}
+@-webkit-keyframes arrow {
+    0% {opacity: 0; margin-bottom: 1.5%;}
+    50% {opacity:1; margin-bottom: 1%;}
+    100% {opacity: 0; margin-bottom: 1.5%;}
+}
+@-moz-keyframes arrow {
+    0% {opacity: 0; margin-bottom: 1.5%;}
+    50% {opacity:1; margin-bottom: 1%;}
+    100% {opacity: 0; margin-bottom: 1.5%;}
+}
+@-ms-keyframes arrow {
+    0% {opacity: 0; margin-bottom: 1.5%;}
+    50% {opacity:1; margin-bottom: 1%;}
+    100% {opacity: 0; margin-bottom: 1.5%;}
+}
+@-o-keyframes arrow {
+    0% {opacity: 0; margin-bottom: 1.5%;}
+    50% {opacity:1; margin-bottom: 1%;}
+    100% {opacity: 0; margin-bottom: 1.5%;}
+}
+@keyframes arrow {
+    0% {opacity: 0; margin-bottom: 1.5%;}
+    50% {opacity:1; margin-bottom: 1%;}
+    100% {opacity: 0; margin-bottom: 1.5%;}
+}
+
+/*@keyframes arrow {
+    0% { margin-bottom: 1.5%;}
+    50% { margin-bottom: 1%; background:url(arrow2.png) no-repeat;}
+    100% { margin-bottom: 1.5%;}
+}*/
+.banner .arrow:hover{animation-play-state: paused; cursor:pointer;}
+
+/* ______________________________________ */
+/*主体*/
+/* 作品展示 */
+.works-title{ width: 100%; height: 630px; background: url(bj01.png) 0 0 no-repeat; position:relative; background-size: cover;}
+.works-title .works-contain{ height:50px;  margin:0 auto; padding:34px 0px 0 24px;}  
+.works-title .works-contain p{ width:289px; height:28px; background:url(work-show.png) no-repeat;}
+/* 子导航 */
+.works-title .case-nav{ width:10%; height:500px; position:absolute; left:30px; top:80px;}
+.works-title .case-nav ul li{ width:110px; height:110px; background:url(works-icon.png) no-repeat; margin-bottom:40px;  cursor:pointer;}
+.works-title .case-nav ul li:nth-of-type(1){ background-position:0 0;}
+.works-title .case-nav ul li:nth-of-type(2){ background-position:0 -108px;}
+.works-title .case-nav ul li:nth-of-type(3){ background-position:0 -222px;}
+/* 作品展示区 */
+.works-title .box li{ display: inline;}/*解决ie问题*/
+.works-title .box{ width:80%; height:540px; cursor:pointer; overflow:hidden; position:absolute; left:200px; top:100px; }
+.works-title .box li img{ float:left;}
+.works-title .box li img:hover{ transition:all 1s linear; transform:scale(1.4);}
+/* 平面设计 */
+.works-title .box .bn{ width:1100px; height:370px;}
+.works-title .box .bn li img{ width:500px; height:173px;  margin:5px;}
+/* 网页设计 */
+.works-title .box .wed{ width:2000px; height:355px; overflow:hidden;}
+.works-title .box .wed li img{ width:540px; height:355px;  margin-right:10px;}
+.works-title .box .wed li img:hover{ transition:all 1s linear; transform:scale(1.2);}
+/* ui设计 */
+.works-title .box .ic{ width:4000px; height:453px; position:absolute; left:0;top:0; overflow:hidden;}
+.works-title .box .ic li img{ width:254px; height:453px; margin-left:2px;}
+.works-title .box .ic li img:hover{ transition:all 1s linear; transform:scale(1.2);}
+
+/* 我的技能 */
+.skill-bg1{ width:100%; height:480px; background:url(skill-bg1.png) no-repeat; background-size: cover;}
+.skill-bg1-in{ height:50px;  margin:0 auto;padding:34px 0px 0 24px;}
+.skill-bg1-in p{ width:289px; height:28px; background:url(skill.png) no-repeat;}
+.skill-bg1 .skill-top{  height:100%; overflow:hidden; box-sizing:border-box;}
+.skill-bg1 .skill-top ul{ overflow:hidden; width:1000px; height:120px; margin:0 auto;}
+.skill-bg1 .skill-top ul li{ width:74px; height:84px; background:url(skll.png) no-repeat; background-size: 100% auto; float:left; margin: 10px 70px 0 10px; transition: all 2s ; cursor: pointer; }
+.skill-bg1 .skill-top ul li:nth-of-type(2){ background-position:0 -83px;}
+.skill-bg1 .skill-top ul li:nth-of-type(3){ background-position:0 -167px;}
+.skill-bg1 .skill-top ul li:nth-of-type(4){ background-position:0 -252px;}
+.skill-bg1 .skill-top ul li:nth-of-type(5){ background-position:0 -334px;}
+.skill-bg1 .skill-top ul li:nth-of-type(6){ background-position:0 -418px;}
+.skill-bg1 .skill-top ul li:nth-of-type(7){ background-position:0 -502px;}
+.skill-bg1 .skill-top ul li:hover{ transform: rotate(360deg) scale(1.15); }
+
+.skill-top-w{ width:1000px; height:250px; margin:0 auto 0; overflow:hidden; }
+.skill-top-w-left{width:400px; height:250px; float:left;}
+.skill-bg1 .skill-top ol{ width:400px; float:left;}
+.skill-bg1 .skill-top ol li{ width:370px; height:40px; font-size:30px; color:#000; margin-bottom:20px;}
+.skill-bg1 .skill-top ol li i{ width:200px; height:22px; border:1px solid #F00; border-radius:25px; display:inline-block; position:relative; margin-top:26px;}
+.skill-bg1 .skill-top ol li p{ width:100px; height:18px;  border-radius:25px; display:inline-block; position:absolute; left:4px; top:2px;} 
+
+.skill-bg1  .skill-title-in{width:500px; height:250px; float:right;}
+.skill-bg1  .skill-title-in p{ 
+    color: #444;
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+
+/* 关于我 */
+.about-title{ width:100%; height:460px; background: url(about-bg-1.png) no-repeat; background-size: cover;}
+.about-title-in{ height:50px;  margin:0 auto 0; padding:34px 0px 0 24px; }
+.about-title-in p{ width:289px; height:28px; background:url(about_03.png) no-repeat;}
+
+.about-title .about_main{width: 1000px; height: 300px; margin:0 auto; overflow: hidden;}
+.about-title .about_main ul{width: 2000px;}
+.about-title .about_main ul li{ padding:0 4px; box-sizing: border-box; width: 166.6666px; height: 300px; display: block; line-height: 30px; float: left; border: 1px solid #000; background:#7CE096; cursor: pointer; overflow: hidden;}
+.about-title .about_main ul li:nth-of-type(2){ background: #DEDA64;}
+.about-title .about_main ul li:nth-of-type(3){ background: #BDCCEC;}
+.about-title .about_main ul li:nth-of-type(4){ background: #EF9586;}
+.about-title .about_main ul li:nth-of-type(5){ background: #B0DEEC;}
+.about-title .about_main ul li:nth-of-type(6){ background: #F5D39F;}
+.about-title .about_main ul li span{ width: 56px; height: 40px; background: url(contact-icons.png) no-repeat; display:inline-block; margin:10px 0 0 120px;}
+.about-title .about_main ul li p{ width: 300px; font-size: 14px; color:#000; margin: 0 auto;}
+.about-title .about_main ul li p:hover{ color:#000;}
+
+
+/* 页脚 */
+.footer{ width:100%; height: 50px; background: #333;  color:#fff; font-size: 18px; line-height:50px;}
+.footer_left{ float:left; margin-left:20px;}
+.footer_right{ float:right; margin-right:20px;}
+
+/* 欢迎光临 */
+.geren{ width:200px; height:30px; background:#000; border:1px solid #000; border-radius:10px; position:absolute; left:20px; top:40px; animation:donghua 4s linear infinite alternate;}
+.geren span{ color:#FFF; font-size:16px; text-align:center; line-height:30px;}
+
+@keyframes donghua{
+    100%{top:200px; }
+}
+.geren:hover{animation-play-state: paused; cursor:pointer;}
+/* 返回顶部 */
+#toTop{ width:47px; height:44px; background:url(top01.png) no-repeat; position:fixed; right:10px; bottom:50px; display:none;}
+#toTop:hover{ width:47px; height:118px; background:url(top02.png) no-repeat; position:fixed; right:10px; bottom:0;}
+
+
+
+
